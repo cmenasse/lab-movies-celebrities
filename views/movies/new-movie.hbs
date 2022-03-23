@@ -1,0 +1,32 @@
+<h2>Add a new Movie</h2>
+<div>
+<form action='/movies/create' method='post'>
+  <div>
+    <input type='text' name='title' id='title'/>
+    <label for='title'>Title</label>
+  </div>
+  <div>
+    <input type='text' name='genre' id='genre'/>
+    <label for='genre'>Genre</label>
+  </div>
+  <div>
+    <input type='text' name='plot' id='plot'/>
+    <label for='plot'>Plot</label>
+  </div>
+  <div>
+    <select name="cast" id={{id}} multiple>
+    {{#each celebrities}}
+        <option value={{id}}>{{name}}</option>
+    {{/each}}
+    </select> 
+  </div>
+  <input type='submit' value='Add'/>
+</form>
+</div>
+
+<div>
+<a href="/movies/">See Movies</a>
+</div>
+<div>
+<a href="/">Home</a>
+</div>
